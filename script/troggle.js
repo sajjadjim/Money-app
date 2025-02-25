@@ -1,10 +1,24 @@
-
 document.getElementById('add-money11').style.display = 'none'
 document.getElementById('cashout1').style.display = 'none'
 document.getElementById('transfer-money1').style.display = 'none'
 document.getElementById('get-bonus1').style.display = 'none' 
 document.getElementById('transaction-history1').style.display = 'none'
 document.getElementById('pay-bill1').style.display = 'none'
+document.getElementById('last-payment-status').style.display = 'block'
+
+
+// Main logo 
+document.getElementById('main-button').addEventListener('click',
+    function(){
+        document.getElementById('add-money11').style.display = 'none'
+        document.getElementById('cashout1').style.display = 'none'
+        document.getElementById('transfer-money1').style.display = 'none'
+        document.getElementById('get-bonus1').style.display = 'none' 
+        document.getElementById('transaction-history1').style.display = 'none'
+        document.getElementById('pay-bill1').style.display = 'none'
+        document.getElementById('last-payment-status').style.display = 'block'
+    }
+)
 
 // add money button 
 document.getElementById('add-money').addEventListener('click',
