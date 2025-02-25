@@ -1,5 +1,5 @@
 document
-  .getElementById("cash-out-submit")
+  .getElementById("transfer-money-submit")
   .addEventListener("click", function (event) {
     event.preventDefault();
     // console.log("working button")
@@ -9,17 +9,11 @@ document
     const convertedPIN = parseInt(pin);
 
     //AMount take
-    const amount = document.getElementById("cash-out-amount").value;
+    const amount = document.getElementById("transfer-money-amount").value;
     const convertedAMOUNT = parseInt(amount);
     // Get the Main balance Here
     const main_Balance = document.getElementById("main-balance").innerText;
     const mainBalanceConvert = parseFloat(main_Balance);
-
-    // check balance is lower that main balance 
-    if(convertedAMOUNT > mainBalanceConvert){
-      alert('Your Balance is Low !!!!')
-      return;
-    }
     // check that the balance
     if (amount && pin) {
       if (convertedPIN === 1234) {
@@ -30,7 +24,7 @@ document
         alert("Enter valid PIN !!!");
       }
     } else {
-      alert("Enter cashout amount !!!");
+      alert("Enter transfer amount !!!");
     }
   });
 // logout Button work 
