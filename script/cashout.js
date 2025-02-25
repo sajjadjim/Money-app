@@ -15,9 +15,9 @@ document
     const main_Balance = document.getElementById("main-balance").innerText;
     const mainBalanceConvert = parseFloat(main_Balance);
 
-    // check balance is lower that main balance 
-    if(convertedAMOUNT > mainBalanceConvert){
-      alert('Your Balance is Low !!!!')
+    // check balance is lower that main balance
+    if (convertedAMOUNT > mainBalanceConvert) {
+      alert("Your Balance is Low !!!!");
       return;
     }
     // check that the balance
@@ -26,6 +26,21 @@ document
         console.log(mainBalanceConvert);
         const sum = mainBalanceConvert - convertedAMOUNT;
         document.getElementById("main-balance").innerText = sum;
+
+        //random Number Genarator
+        const transitionNumber = Math.random();
+        const container = document.getElementById("transaction-container");
+        const div = document.createElement("div");
+        div.classList.add("rounded-xl");
+        div.classList.add("mt-1");
+        div.innerHTML = `
+    <div class="bg-white rounded-xl px-2">
+          <h1 class="text-red-400">Cash out </h1>
+<p>Amount :$${amount}</p>
+<h1>Transition Id:${transitionNumber}</h1>
+</div>
+ `;
+        container.appendChild(div);
       } else {
         alert("Enter valid PIN !!!");
       }
@@ -33,7 +48,7 @@ document
       alert("Enter cashout amount !!!");
     }
   });
-// logout Button work 
-  document.getElementById('log-out').addEventListener('click',function(){
-    window.location.href="./index.html"
-})
+// logout Button work
+document.getElementById("log-out").addEventListener("click", function () {
+  window.location.href = "./index.html";
+});

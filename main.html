@@ -27,7 +27,7 @@
                 <!-- heading part -->
                 <div class="flex justify-evenly  items-center pt-5">
                     <button id="main-button" class="cursor-pointer"><i
-                            class="fa-brands fa-telegram text-4xl text-[#0874F2]"></i></button>
+                            class="fa-brands fa-telegram text-4xl text-[#0874F2] animate-bounce"></i></button>
                     <!-- balance  -->
                     <div><p class="font-bold text-3xl ">$<span
                                 id="main-balance">4500</span></p><p
@@ -151,7 +151,7 @@
                     </div>
                 </section>
 
-                <!-- ADD Money   -->
+                <!--1. ADD Money   -->
                 <section id="add-money11">
                     <div class="mt-[50px] mx-5">
                         <div>
@@ -163,7 +163,7 @@
                                 <fieldset class="fieldset">
                                     <legend class="fieldset-legend">Select A
                                         Bank</legend>
-                                    <select class="select rounded-full">
+                                    <select id="select_bank" class="select rounded-full">
                                         <option disabled selected>Select
                                             Bank</option>
                                         <option>Islami Bank</option>
@@ -200,7 +200,7 @@
                     </div>
                 </section>
 
-                <!-- cash out section  -->
+                <!--2. cash out section  -->
                 <section id="cashout1">
                     <div class="mt-[50px] mx-5">
                         <div>
@@ -237,7 +237,7 @@
                     </div>
                 </section>
 
-                <!-- Transfer Money section  -->
+                <!--3. Transfer Money section  -->
                 <section id="transfer-money1">
                     <div class="mt-[50px] mx-5">
                         <div>
@@ -274,7 +274,7 @@
                         </div>
                     </div>
                 </section>
-                <!-- Get Bonus  section  -->
+                <!--4. Get Bonus  section  -->
                 <section id="get-bonus1">
                     <div class="mt-[50px] mx-5">
                         <div>
@@ -298,7 +298,7 @@
                     </div>
                 </section>
 
-                <!-- Pay Bill   -->
+                <!--5. Pay Bill   -->
                 <section id="pay-bill1">
                     <div class="mt-[50px] mx-5">
                         <div>
@@ -310,7 +310,7 @@
                                 <fieldset class="fieldset">
                                     <legend class="fieldset-legend">Select To
                                         Pay</legend>
-                                    <select class="select rounded-full">
+                                    <select id="pay-Bill-option" class="select rounded-full">
                                         <option disabled selected>Select
                                             Biller</option>
                                         <option>Water</option>
@@ -342,23 +342,26 @@
                             </div>
                             <div class="text-center mr-2">
                                 <button id="pay-bill-submit"
-                                    class="bg-[#0874F2] text-white font-bold text-xl px-20 rounded-full py-2 cursor-pointer mt-3">Add
-                                    Money</button>
+                                    class="bg-[#0874F2] text-white font-bold text-xl px-20 rounded-full py-2 cursor-pointer mt-3">Pay Bill</button>
                             </div>
                         </div>
                     </div>
                 </section>
+                <!--6. transaction-history -->
                 <section id="transaction-history1">
                     <div class="mt-[50px] mx-5">
                         <div>
-                            <h1 class="font-bold text-xl ml-5">Transaction
+                            <h1 class="font-bold text-xl ml-5 text-red-500 text-center animate-pulse">Transaction
                                 History</h1>
                         </div>
                         <div class="shadow-lg ml-5 p-6 rounded-xl">
-
-                            <div>
-                                <input type="text"
-                                    class="input" />
+                            <div id="transaction-container">
+                                <!-- <p type="text"class="input mt-2"></p>  -->
+                                <!-- <div class="bg-white rounded-xl px-2">
+                                    <h1 class="text-green-500">ADD money From Bkash</h1>
+                                    <p>Amount :$4500</p>
+                                    <h1>Transition Id</h1>
+                                 </div> -->
                             </div>
                         </div>
                     </div>
