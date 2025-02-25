@@ -31,7 +31,7 @@ document
         div.innerHTML = `
       <div class="bg-white rounded-xl px-2">
                                     <h1 class="text-green-500">ADD money From ${bankName}</h1>
-                                    <p>Amount :<span class="text-green-400">$${amount}</span></p>
+                                    <p>Amount :<span class="text-green-500">$${amount}</span></p>
                                     <h1>Transition Id:${transitionNumber}</h1>
                                  </div>
             `;
