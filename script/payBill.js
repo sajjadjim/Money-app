@@ -36,7 +36,7 @@ document
                 div.innerHTML = `
             <div class="bg-white rounded-xl px-2">
                   <h1 class="text-blue-400">Pay Bill ${payBill}</h1>
-        <p>Amount :$${amount}</p>
+        <p>Amount :<span class="text-red-500">$${amount}</span></p>
         <h1>Transition Id:${transitionNumber}</h1>
         </div>
          `;

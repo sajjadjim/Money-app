@@ -20,6 +20,24 @@ document
         console.log(mainBalanceConvert);
         const sum = mainBalanceConvert - convertedAMOUNT;
         document.getElementById("main-balance").innerText = sum;
+
+        document.getElementById("main-balance").innerText = sum;
+        //Account Name Taken
+        const accountNumber = document.getElementById("transfer-account-number").value;
+        //random Number Genarator
+        const transitionNumber = Math.random();
+        const container = document.getElementById("transaction-container");
+        const div = document.createElement("div");
+        div.classList.add("rounded-xl");
+        div.classList.add("mt-1");
+        div.innerHTML = `
+      <div class="bg-white rounded-xl px-2">
+                                    <h1 class="text-yellow-400">Send Money ${accountNumber}</h1>
+                                    <p>Amount :<span class="text-red-400">$${amount}</span></p>
+                                    <h1>Transition Id:${transitionNumber}</h1>
+                                 </div>
+            `;
+        container.appendChild(div);
       } else {
         alert("Enter valid PIN !!!");
       }
