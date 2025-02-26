@@ -1,20 +1,21 @@
 document
   .getElementById("add-money-submit")
   .addEventListener("click", function (event) {
+    // It use for the screen  dones't give reload to the time when button work
     event.preventDefault();
     // console.log("working button")
-    // pin access that
+    // pin access that take for using
     const pin = document.getElementById("pin-number").value;
     //   converted pin int number
     const convertedPIN = parseInt(pin);
 
-    //AMount take
+    //AMount take By the getElementById id 
     const amount = document.getElementById("add-amount").value;
     const convertedAMOUNT = parseInt(amount);
-    // Get the Main balance Here
+    // Get the Main balance access  Here for using this part
     const main_Balance = document.getElementById("main-balance").innerText;
     const mainBalanceConvert = parseFloat(main_Balance);
-    // check that the balance
+    // check that the balance; if amount is main balance low then the alert given
     if (amount && pin) {
       if (convertedPIN === 1234) {
         console.log(mainBalanceConvert);
@@ -22,10 +23,12 @@ document
         document.getElementById("main-balance").innerText = sum;
         //bank Name Taken
         const bankName = document.getElementById("select_bank").value;
-        //random Number Genarator
+        //Random Number Genarator for the tax. id for
         const transitionNumber = Math.random();
         const container = document.getElementById("transaction-container");
         const div = document.createElement("div");
+        //class List Type add for the using that the type of the class
+        // div.classList.add("bg-white"); it use for the background color
         div.classList.add("rounded-xl");
         div.classList.add("mt-1");
         div.innerHTML = `
@@ -43,7 +46,7 @@ document
       alert("Enter amount !!!");
     }
   });
-// logout Button work
+// logout Button work for the log out
 document.getElementById("log-out").addEventListener("click", function () {
   window.location.href = "./index.html";
 });
